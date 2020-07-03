@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/flux/static/css/main.4cca5b20.chunk.css",
+    "main.js": "/flux/static/js/main.96ccb688.chunk.js",
+    "main.js.map": "/flux/static/js/main.96ccb688.chunk.js.map",
+    "runtime-main.js": "/flux/static/js/runtime-main.1b6486f0.js",
+    "runtime-main.js.map": "/flux/static/js/runtime-main.1b6486f0.js.map",
+    "static/js/2.52961aa8.chunk.js": "/flux/static/js/2.52961aa8.chunk.js",
+    "static/js/2.52961aa8.chunk.js.map": "/flux/static/js/2.52961aa8.chunk.js.map",
+    "index.html": "/flux/index.html",
+    "precache-manifest.908609e597ad7fe4efda44e3ab9e5491.js": "/flux/precache-manifest.908609e597ad7fe4efda44e3ab9e5491.js",
+    "service-worker.js": "/flux/service-worker.js",
+    "static/css/main.4cca5b20.chunk.css.map": "/flux/static/css/main.4cca5b20.chunk.css.map",
+    "static/js/2.52961aa8.chunk.js.LICENSE.txt": "/flux/static/js/2.52961aa8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b6486f0.js",
+    "static/js/2.52961aa8.chunk.js",
+    "static/css/main.4cca5b20.chunk.css",
+    "static/js/main.96ccb688.chunk.js"
+  ]
+}
