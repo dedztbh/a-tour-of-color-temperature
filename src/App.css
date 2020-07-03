@@ -11,3 +11,61 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
+
+button {
+  padding: 1em 5em 1em 5em;
+  background-color: #322c34;
+  border: none;
+  border-radius: 0.5em;
+  color: #c8c8c8;
+  font-size: calc(5px + 2vmin);
+}
+
+button:hover {
+  background-color: #32363e;
+  cursor: auto;
+}
+
+
+/* From https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+.slideContainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  margin: 1em;
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  min-width: 400px;
+  width: 65%; /* Full-width */
+  height: 1.5em; /* Specified height */
+  background: #969696; /* Grey background */
+  outline: none; /* Remove outline */
+  border-radius: 1em;
+  opacity: 0.5; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #32363e; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #32363e; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
