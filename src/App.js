@@ -206,7 +206,7 @@ function App() {
                                            id="myRange" value={temp} onChange={(event) => {setTemp(parseInt(event.target.value))}}
                                            disabled={!slider} />
                                 </div>
-                                <button onClick={buttonClicked} disabled={slider} style={slider ? {opacity: 0} : {}}>Continue</button>
+                                <button onClick={buttonClicked} disabled={slider} style={(slider || change) ? {opacity: 0} : {}}>Continue</button>
                             </div>
                         )}
                     </Transition>
