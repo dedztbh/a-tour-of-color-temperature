@@ -75,7 +75,7 @@ const text_decrease =
     `.split('\n')
 const text1500 =
     `I hope you enjoyed this tour (except for the 6500K part)
-    And thank you to being aware of light pollution.
+    And thank you for being aware of light pollution.
     Choose lights that are not too bright, shielded, and warm at night!
     `.split('\n');
 
@@ -99,7 +99,7 @@ function App() {
     const [page, setPage] = useState(0);
     const [delay, setDelay] = useState(3e8);
     const [disc, setDisc] = useState(text1850);
-    const [discBuffer, setDiscBuffer] = useState('');
+    const [discBuffer, setDiscBuffer] = useState([]);
     const [change, setChange] = useState(false);
     const [slider, setSlider] = useState(false);
 
@@ -156,7 +156,7 @@ function App() {
                     setTargetTemp(5000);
                     setDiscBuffer(text5000);
                     setChange(true);
-                    setDelay(15);
+                    setDelay(10);
                     break;
                 case 5:
                     setTargetTemp(6500);
@@ -169,7 +169,7 @@ function App() {
                     setDisc(text_decrease);
                     setDiscBuffer(text1500);
                     setChange(true);
-                    setDelay(10);
+                    setDelay(15);
                     break;
                 default:
             }
