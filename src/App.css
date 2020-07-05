@@ -80,9 +80,12 @@ button:hover {
 
 .control {
   padding-bottom: 5vh;
-  width: 75vw;
+  width: 100%;
 }
 
 .disc {
-  height: 6em;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }

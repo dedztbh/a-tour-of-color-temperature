@@ -73,7 +73,7 @@ const text_decrease =
 const text1500 =
     `I hope you enjoyed this tour (except the 6500K part)
     And thank you to being conscious about light pollution.
-    Choose light that are not too bright, shields, and warm at night!
+    Choose light that are not too bright, shields, and warm at night! 
     `.split('\n');
 
 function App() {
@@ -182,13 +182,15 @@ function App() {
             <div className="App-header" style={{background : `rgb(${rgb.r},${rgb.g},${rgb.b})` }}>
                 <span className="k-meter">{temp}K</span>
                 <div className="control">
-                    <div className="disc">{disc_bred}</div>
-                    <div className="slideContainer" style={slider ? {} : {opacity: 0}}>
+                    <div className="disc">
+                        <span>{disc_bred}</span>
+                    </div>
+                    <div className="slideContainer" style={slider ? {} : {display: 'none'}}>
                         <input type="range" min="1000" max="6500" className="slider"
                                id="myRange" value={temp} onChange={(event) => {setTemp(parseInt(event.target.value))}}
                                disabled={!slider} />
                     </div>
-                    <button onClick={buttonClicked} disabled={slider} style={slider ? {opacity: 0} : {}}>Continue</button>
+                    <button onClick={buttonClicked} disabled={slider} style={(slider || change) ? {opacity: 0} : {}}>Continue</button>
                 </div>
             </div>
         </div>
