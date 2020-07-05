@@ -1,7 +1,7 @@
 {
   "name": "flux",
   "version": "0.1.0",
-  "homepage": "https://DEDZTBH.github.io/flux",
+  "homepage": "https://DEDZTBH.github.io/a-tour-of-color-temperature",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.29",

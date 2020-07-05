@@ -211,7 +211,7 @@ function App() {
                         )}
                     </Transition>
             </div>
-            <a href="https://github.com/DEDZTBH/flux">
+            <a href="https://github.com/DEDZTBH/a-tour-of-color-temperature">
                 <FontAwesomeIcon className="github" icon={faGithub} />
             </a>
         </div>
