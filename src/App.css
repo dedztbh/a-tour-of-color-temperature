@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  color: #322c34;
 }
 
 .App-header {
@@ -68,7 +69,6 @@ button:hover {
 }
 
 .k-meter {
-  color: black;
   font-weight: bold;
   font-size: 24pt;
   padding-top: 5vh;
@@ -90,15 +90,24 @@ a {
   color: inherit;
 }
 
-.github {
+.fab {
   position: fixed;
-  bottom: 0.75em;
-  right: 0.75em;
   font-size: calc(15px + 4vmin);
   color: #322c34;
 }
 
-.github:hover {
+.fab:hover {
   cursor: pointer;
   color: #32363e;
 }
+
+.github {
+  bottom: 0.75em;
+  right: 0.75em;
+}
+
+.full-screen {
+  top: 0.75em;
+  right: 0.75em;
+}
+

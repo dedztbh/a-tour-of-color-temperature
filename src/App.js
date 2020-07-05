@@ -2,7 +2,9 @@ import React, {useEffect, useState, useRef} from 'react';
 import { Transition } from 'react-transition-group'
 import {colorTemperatureToRGB} from './lib/colorTempToRGB';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import Fullscreen from "react-full-screen";
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faExpand } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
 
 //From https://overreacted.io/making-setinterval-declarative-with-react-hooks/
@@ -31,7 +33,7 @@ const text1850 =
     Wait, what is color temperature? 
     Color temperature is the temperature at which a black body radiates light of this color.
     I know you are not here for a physics lesson. So lets get started.
-    Please turn up your screen brightness for best experience.
+    Please turn up your screen brightness and fullscreen (top right) for the best experience.
     What you see now is the color temperature of candle light.
     `.split('\n');
 const text2400 =
@@ -40,7 +42,7 @@ const text2400 =
     `.split('\n');
 const text2700 =
     `High pressure sodium streetlight.
-    We mainly used them before LED streetlights.
+    We used them mainly before LED streetlights.
     `.split('\n');
 const text3000 =
     `Maximum color temperature for streetlights according to AMA's recommendation.
@@ -102,6 +104,7 @@ function App() {
     const [discBuffer, setDiscBuffer] = useState([]);
     const [change, setChange] = useState(false);
     const [slider, setSlider] = useState(false);
+    const [isFull, setIsFull] = useState(false);
 
     useInterval(() => {
         if (!slider) {
@@ -189,8 +192,9 @@ function App() {
 
     return (
         <div className="App">
-            <div className="App-header" style={{background : `rgb(${rgb.r},${rgb.g},${rgb.b})` }}>
-                <span className="k-meter">{temp}K</span>
+            <Fullscreen enabled={isFull} onChange={f => setIsFull(f)}>
+                <div className="App-header" style={{background : `rgb(${rgb.r},${rgb.g},${rgb.b})` }}>
+                    <span className="k-meter">{temp}K</span>
                     <Transition timeout={duration} in={!change || temp > targetTemp}>
                         {state => (
                             <div className="main-area"
@@ -210,10 +214,13 @@ function App() {
                             </div>
                         )}
                     </Transition>
-            </div>
-            <a href="https://github.com/DEDZTBH/a-tour-of-color-temperature">
-                <FontAwesomeIcon className="github" icon={faGithub} />
-            </a>
+                </div>
+                <a href="https://github.com/DEDZTBH/a-tour-of-color-temperature">
+                    <FontAwesomeIcon className="fab github" icon={faGithub} />
+                </a>
+            </Fullscreen>
+            <FontAwesomeIcon className="fab full-screen" icon={faExpand} onClick={() => {setIsFull(true);}} />
+
         </div>
     );
 }
