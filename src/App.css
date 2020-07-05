@@ -3,7 +3,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,46 +28,43 @@ button:hover {
 
 /* From https://www.w3schools.com/howto/howto_js_rangeslider.asp */
 .slideContainer {
-  width: 100%; /* Width of the outside container */
+  width: 100%;
   transition: opacity 1s;
 }
 
-/* The slider itself */
 .slider {
   margin: 1em;
-  -webkit-appearance: none;  /* Override default CSS styles */
+  -webkit-appearance: none;
   appearance: none;
   min-width: 400px;
-  width: 65%; /* Full-width */
-  height: 1.5em; /* Specified height */
-  background: #969696; /* Grey background */
-  outline: none; /* Remove outline */
+  width: 65%;
+  height: 1.5em;
+  background: #969696;
+  outline: none;
   border-radius: 1em;
-  opacity: 0.5; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  opacity: 0.5;
+  -webkit-transition: .2s;
   transition: opacity .2s;
 }
 
-/* Mouse-over effects */
 .slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
+  opacity: 1;
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
+  -webkit-appearance: none;
   appearance: none;
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #32363e; /* Green background */
-  cursor: pointer; /* Cursor on hover */
+  width: 25px;
+  height: 25px;
+  background: #32363e;
+  cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #32363e; /* Green background */
-  cursor: pointer; /* Cursor on hover */
+  width: 25px;
+  height: 25px;
+  background: #32363e;
+  cursor: pointer;
 }
 
 .k-meter {
@@ -78,7 +74,7 @@ button:hover {
   padding-top: 5vh;
 }
 
-.control {
+.main-area {
   padding-bottom: 5vh;
   width: 100%;
 }
@@ -88,4 +84,21 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+a {
+  color: inherit;
+}
+
+.github {
+  position: fixed;
+  bottom: 0.75em;
+  right: 0.75em;
+  font-size: calc(15px + 4vmin);
+  color: #322c34;
+}
+
+.github:hover {
+  cursor: pointer;
+  color: #32363e;
 }

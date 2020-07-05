@@ -1,5 +1,8 @@
 import React, {useEffect, useState, useRef} from 'react';
+import { Transition } from 'react-transition-group'
 import {colorTemperatureToRGB} from './lib/colorTempToRGB';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import './App.css';
 
 //From https://overreacted.io/making-setinterval-declarative-with-react-hooks/
@@ -43,7 +46,7 @@ const text3000 =
     `Maximum color temperature for streetlights according to AMA's recommendation.
     Wait, but why?
     When we go to higher color temperatures, there is more blue light.
-    And blue light has many adverse effects at night.
+    And excessive blue light has many harmful effects at night.
     Especially to our health and to the ecosystem. 
     You will see why soon.
     `.split('\n');
@@ -71,10 +74,24 @@ const text_decrease =
      And the list goes on...
     `.split('\n')
 const text1500 =
-    `I hope you enjoyed this tour (except the 6500K part)
-    And thank you to being conscious about light pollution.
-    Choose light that are not too bright, shields, and warm at night! 
+    `I hope you enjoyed this tour (except for the 6500K part)
+    And thank you to being aware of light pollution.
+    Choose lights that are not too bright, shielded, and warm at night!
     `.split('\n');
+
+const duration = 300;
+
+const defaultStyle = {
+    transition: `opacity ${duration}ms ease-in-out`,
+    opacity: 0,
+}
+
+const transitionStyles = {
+    entering: { opacity: 1 },
+    entered:  { opacity: 1 },
+    exiting:  { opacity: 0 },
+    exited:  { opacity: 0 },
+};
 
 function App() {
     const [targetTemp, setTargetTemp] = useState(1850);
@@ -108,48 +125,41 @@ function App() {
         }
     }, delay)
 
-
     function buttonClicked() {
         if (!change) {
             switch (page) {
                 case 0:
                     setTargetTemp(2400);
-                    setDisc([]);
                     setDiscBuffer(text2400);
                     setChange(true);
                     setDelay(15);
                     break;
                 case 1:
                     setTargetTemp(2700);
-                    setDisc([]);
                     setDiscBuffer(text2700);
                     setChange(true);
                     setDelay(15);
                     break;
                 case 2:
                     setTargetTemp(3000);
-                    setDisc([]);
                     setDiscBuffer(text3000);
                     setChange(true);
                     setDelay(15);
                     break;
                 case 3:
                     setTargetTemp(4100);
-                    setDisc([]);
                     setDiscBuffer(text4100);
                     setChange(true);
                     setDelay(10);
                     break;
                 case 4:
                     setTargetTemp(5000);
-                    setDisc([]);
                     setDiscBuffer(text5000);
                     setChange(true);
                     setDelay(15);
                     break;
                 case 5:
                     setTargetTemp(6500);
-                    setDisc([]);
                     setDiscBuffer(text6500);
                     setChange(true);
                     setDelay(5);
@@ -169,9 +179,9 @@ function App() {
 
     let rgb = colorTemperatureToRGB(temp);
 
-    let disc_bred = disc.map((d) => {
+    let disc_bred = disc.map((d, i) => {
         return (
-            <span>
+            <span key={i}>
                 {d} <br />
             </span>
         );
@@ -181,18 +191,29 @@ function App() {
         <div className="App">
             <div className="App-header" style={{background : `rgb(${rgb.r},${rgb.g},${rgb.b})` }}>
                 <span className="k-meter">{temp}K</span>
-                <div className="control">
-                    <div className="disc">
-                        <span>{disc_bred}</span>
-                    </div>
-                    <div className="slideContainer" style={slider ? {} : {display: 'none'}}>
-                        <input type="range" min="1000" max="6500" className="slider"
-                               id="myRange" value={temp} onChange={(event) => {setTemp(parseInt(event.target.value))}}
-                               disabled={!slider} />
-                    </div>
-                    <button onClick={buttonClicked} disabled={slider} style={(slider || change) ? {opacity: 0} : {}}>Continue</button>
-                </div>
+                    <Transition timeout={duration} in={!change || temp > targetTemp}>
+                        {state => (
+                            <div className="main-area"
+                                 style={{
+                                     ...defaultStyle,
+                                     ...transitionStyles[state]
+                                 }}>
+                                <div className="disc">
+                                    <span>{disc_bred}</span>
+                                </div>
+                                <div className="slideContainer" style={slider ? {} : {display: 'none'}}>
+                                    <input type="range" min="1000" max="6500" className="slider"
+                                           id="myRange" value={temp} onChange={(event) => {setTemp(parseInt(event.target.value))}}
+                                           disabled={!slider} />
+                                </div>
+                                <button onClick={buttonClicked} disabled={slider} style={slider ? {opacity: 0} : {}}>Continue</button>
+                            </div>
+                        )}
+                    </Transition>
             </div>
+            <a href="https://github.com/DEDZTBH/flux">
+                <FontAwesomeIcon className="github" icon={faGithub} />
+            </a>
         </div>
     );
 }
