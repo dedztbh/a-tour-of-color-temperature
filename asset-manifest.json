@@ -1,22 +1,18 @@
 {
   "files": {
-    "main.css": "/flux/static/css/main.76259482.chunk.css",
-    "main.js": "/flux/static/js/main.e7b868dd.chunk.js",
-    "main.js.map": "/flux/static/js/main.e7b868dd.chunk.js.map",
-    "runtime-main.js": "/flux/static/js/runtime-main.1b6486f0.js",
-    "runtime-main.js.map": "/flux/static/js/runtime-main.1b6486f0.js.map",
-    "static/js/2.26c775d3.chunk.js": "/flux/static/js/2.26c775d3.chunk.js",
-    "static/js/2.26c775d3.chunk.js.map": "/flux/static/js/2.26c775d3.chunk.js.map",
-    "index.html": "/flux/index.html",
-    "precache-manifest.7a9c5de6047ea27930136f6062d2d8fd.js": "/flux/precache-manifest.7a9c5de6047ea27930136f6062d2d8fd.js",
-    "service-worker.js": "/flux/service-worker.js",
-    "static/css/main.76259482.chunk.css.map": "/flux/static/css/main.76259482.chunk.css.map",
-    "static/js/2.26c775d3.chunk.js.LICENSE.txt": "/flux/static/js/2.26c775d3.chunk.js.LICENSE.txt"
+    "main.css": "/a-tour-of-color-temperature/static/css/main.8ac812db.chunk.css",
+    "main.js": "/a-tour-of-color-temperature/static/js/main.dd900e70.chunk.js",
+    "runtime-main.js": "/a-tour-of-color-temperature/static/js/runtime-main.e796e706.js",
+    "static/js/2.26c775d3.chunk.js": "/a-tour-of-color-temperature/static/js/2.26c775d3.chunk.js",
+    "index.html": "/a-tour-of-color-temperature/index.html",
+    "precache-manifest.5b686e021757da8bdd6f6bde20e1a9b8.js": "/a-tour-of-color-temperature/precache-manifest.5b686e021757da8bdd6f6bde20e1a9b8.js",
+    "service-worker.js": "/a-tour-of-color-temperature/service-worker.js",
+    "static/js/2.26c775d3.chunk.js.LICENSE.txt": "/a-tour-of-color-temperature/static/js/2.26c775d3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1b6486f0.js",
+    "static/js/runtime-main.e796e706.js",
     "static/js/2.26c775d3.chunk.js",
-    "static/css/main.76259482.chunk.css",
-    "static/js/main.e7b868dd.chunk.js"
+    "static/css/main.8ac812db.chunk.css",
+    "static/js/main.dd900e70.chunk.js"
   ]
 }
