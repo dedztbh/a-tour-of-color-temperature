@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Transition} from 'react-transition-group'
 import {colorTemperatureToRGB} from './lib/colorTempToRGB';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -10,7 +10,7 @@ import {useInterval} from './useInterval';
 import {text1850, text1500, text2400, text2700, text3000, text4100, text5000, text6500, text_decrease} from './quotes';
 import './App.css';
 
-const duration = 300;
+const duration = 500;
 const defaultStyle = {
     transition: `opacity ${duration}ms ease-in-out`,
     opacity: 0,
@@ -32,6 +32,8 @@ function App() {
     const [change, setChange] = useState(false);
     const [slider, setSlider] = useState(false);
     const [isFull, setIsFull] = useState(false);
+    const [delaySetDisc, setDelaySetDisc] = useState(false);
+    const [showMain, setShowMain] = useState(true);
 
     useInterval(() => {
         if (!slider) {
@@ -44,16 +46,34 @@ function App() {
                     setChange(false);
                     setDelay(3e8);
                     setDisc(discBuffer);
-                    switch (temp) {
-                        case 1500:
-                            setSlider(true);
-                            break;
-                        default:
+                    if (temp === 1500) {
+                        setDiscBuffer(text1500);
+                        setDelaySetDisc(true);
+                        setShowMain(false);
+                    } else {
+                        setShowMain(true);
                     }
                 }
             }
         }
-    }, delay)
+    }, delay);
+
+    useEffect(() => {
+        if (delaySetDisc) {
+            let timer = setTimeout(() => {
+                setDisc(discBuffer);
+                setDelaySetDisc(false);
+                setShowMain(true);
+                if (temp === 1500) {
+                    setSlider(true);
+                }
+            }, duration);
+            return () => {
+                clearTimeout(timer);
+            }
+        }
+// eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [delaySetDisc]);
 
     function buttonClicked() {
         if (!change) {
@@ -61,44 +81,37 @@ function App() {
                 case 0:
                     setTargetTemp(2400);
                     setDiscBuffer(text2400);
-                    setChange(true);
                     setDelay(15);
                     break;
                 case 1:
                     setTargetTemp(2700);
                     setDiscBuffer(text2700);
-                    setChange(true);
                     setDelay(15);
                     break;
                 case 2:
                     setTargetTemp(3000);
                     setDiscBuffer(text3000);
-                    setChange(true);
                     setDelay(15);
                     break;
                 case 3:
                     setTargetTemp(4100);
                     setDiscBuffer(text4100);
-                    setChange(true);
                     setDelay(10);
                     break;
                 case 4:
                     setTargetTemp(5000);
                     setDiscBuffer(text5000);
-                    setChange(true);
                     setDelay(10);
                     break;
                 case 5:
                     setTargetTemp(6500);
                     setDiscBuffer(text6500);
-                    setChange(true);
                     setDelay(5);
                     break;
                 case 6:
                     setTargetTemp(1500);
-                    setDisc(text_decrease);
-                    setDiscBuffer(text1500);
-                    setChange(true);
+                    setDiscBuffer(text_decrease);
+                    setDelaySetDisc(true);
                     setDelay(15);
                     break;
                 default:
@@ -107,12 +120,14 @@ function App() {
                     setPage(0);
                     setDelay(3e8);
                     setDisc(text1850);
-                    setDiscBuffer('');
                     setChange(false);
                     setSlider(false);
+                    setShowMain(true);
                     return;
             }
             setPage(page + 1);
+            setShowMain(false);
+            setChange(true);
         } else {
             setDelay(0);
         }
@@ -120,7 +135,7 @@ function App() {
 
     let rgb = colorTemperatureToRGB(temp);
 
-    let btn_disable = change && !delay;
+    let btn_disable = (change && !delay) || (delaySetDisc && temp === 1500);
 
     return (
         <div className="App">
@@ -133,7 +148,7 @@ function App() {
                         </div>
                     </div>
                     <div className="main-area">
-                        <Transition timeout={duration} in={!change || temp > targetTemp}>
+                        <Transition timeout={duration} in={showMain}>
                             {state => (
                                 <div
                                     style={{
