@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/a-tour-of-color-temperature/precache-manifest.4981febcae40f78a063e69d9c25502b8.js"
+  "/a-tour-of-color-temperature/precache-manifest.b359759b0c12fb536cbe9d2e7cf67f5a.js"
 );
 
 self.addEventListener('message', (event) => {
