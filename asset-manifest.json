@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/a-tour-of-color-temperature/static/css/main.8de01eec.chunk.css",
-    "main.js": "/a-tour-of-color-temperature/static/js/main.577cb93b.chunk.js",
+    "main.css": "/a-tour-of-color-temperature/static/css/main.eaa87582.chunk.css",
+    "main.js": "/a-tour-of-color-temperature/static/js/main.7b3ace6a.chunk.js",
     "runtime-main.js": "/a-tour-of-color-temperature/static/js/runtime-main.e796e706.js",
-    "static/js/2.16176cf0.chunk.js": "/a-tour-of-color-temperature/static/js/2.16176cf0.chunk.js",
+    "static/js/2.5531c039.chunk.js": "/a-tour-of-color-temperature/static/js/2.5531c039.chunk.js",
     "index.html": "/a-tour-of-color-temperature/index.html",
-    "precache-manifest.19ff1eef331ac2212fa3777ebf128166.js": "/a-tour-of-color-temperature/precache-manifest.19ff1eef331ac2212fa3777ebf128166.js",
+    "precache-manifest.335268a798e0915cf3bb987afabbefe5.js": "/a-tour-of-color-temperature/precache-manifest.335268a798e0915cf3bb987afabbefe5.js",
     "service-worker.js": "/a-tour-of-color-temperature/service-worker.js",
-    "static/js/2.16176cf0.chunk.js.LICENSE.txt": "/a-tour-of-color-temperature/static/js/2.16176cf0.chunk.js.LICENSE.txt"
+    "static/js/2.5531c039.chunk.js.LICENSE.txt": "/a-tour-of-color-temperature/static/js/2.5531c039.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e796e706.js",
-    "static/js/2.16176cf0.chunk.js",
-    "static/css/main.8de01eec.chunk.css",
-    "static/js/main.577cb93b.chunk.js"
+    "static/js/2.5531c039.chunk.js",
+    "static/css/main.eaa87582.chunk.css",
+    "static/js/main.7b3ace6a.chunk.js"
   ]
 }
