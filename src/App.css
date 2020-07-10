@@ -9,23 +9,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  font-size: calc(6px + 2vmin);
+  font-size: calc(14px + 1.5vmin);
 }
-
-button {
-  padding: 0.75em 5em 0.75em 5em;
-  background-color: #322c34;
-  border: none;
-  border-radius: 0.5em;
-  color: #c8c8c8;
-  font-size: calc(5px + 2vmin);
-}
-
-button:hover {
-  background-color: #32363e;
-  cursor: pointer;
-}
-
 
 /* From https://www.w3schools.com/howto/howto_js_rangeslider.asp */
 .slideContainer {
@@ -70,13 +55,14 @@ button:hover {
 
 .k-meter {
   font-weight: bold;
-  font-size: 24pt;
-  padding-top: 5vh;
+  font-size: 36pt;
+  padding-top: 3vh;
 }
 
 .main-area {
   padding-bottom: 5vh;
   width: 95%;
+  max-width: 50em;
 }
 
 .disc {

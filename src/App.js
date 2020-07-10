@@ -28,7 +28,7 @@ function App() {
     const [page, setPage] = useState(0);
     const [delay, setDelay] = useState(3e8);
     const [disc, setDisc] = useState(text1850);
-    const [discBuffer, setDiscBuffer] = useState([]);
+    const [discBuffer, setDiscBuffer] = useState('');
     const [change, setChange] = useState(false);
     const [slider, setSlider] = useState(false);
     const [isFull, setIsFull] = useState(false);
@@ -107,7 +107,7 @@ function App() {
                     setPage(0);
                     setDelay(3e8);
                     setDisc(text1850);
-                    setDiscBuffer([]);
+                    setDiscBuffer('');
                     setChange(false);
                     setSlider(false);
                     return;
@@ -119,14 +119,6 @@ function App() {
     }
 
     let rgb = colorTemperatureToRGB(temp);
-
-    let disc_bred = disc.map((d, i) => {
-        return (
-            <span key={i}>
-                {d} <br/>
-            </span>
-        );
-    })
 
     let btn_disable = change && !delay;
 
@@ -149,7 +141,7 @@ function App() {
                                         ...transitionStyles[state]
                                     }}>
                                     <div className="disc">
-                                        <span>{disc_bred}</span>
+                                        <span>{disc}</span>
                                     </div>
                                     <div className="slideContainer" style={slider ? {} : {display: 'none'}}>
                                         <input type="range" min="500" max="6500" className="slider"
