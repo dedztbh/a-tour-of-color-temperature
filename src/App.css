@@ -1,105 +1,105 @@
 .App {
-  text-align: center;
-  color: #322c34;
+    text-align: center;
+    color: #322c34;
 }
 
 .App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  font-size: calc(14px + 1.5vmin);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(14px + 1.5vmin);
 }
 
 /* From https://www.w3schools.com/howto/howto_js_rangeslider.asp */
 .slideContainer {
-  width: 100%;
-  transition: opacity 1s;
+    width: 100%;
+    transition: opacity 1s;
 }
 
 .slider {
-  margin: 1em;
-  -webkit-appearance: none;
-  appearance: none;
-  min-width: 400px;
-  width: 65%;
-  height: 1.5em;
-  background: #969696;
-  outline: none;
-  border-radius: 1em;
-  opacity: 0.5;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+    margin: 1em;
+    -webkit-appearance: none;
+    appearance: none;
+    min-width: 350px;
+    width: 65%;
+    height: 1.5em;
+    background: #969696;
+    outline: none;
+    border-radius: 1em;
+    opacity: 0.5;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
 }
 
 .slider:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  background: #32363e;
-  cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #32363e;
+    cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #32363e;
-  cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background: #32363e;
+    cursor: pointer;
 }
 
 .k-meter {
-  font-weight: bold;
-  font-size: 36pt;
-  padding-top: 3vh;
+    font-weight: bold;
+    font-size: 36pt;
+    padding-top: 3vh;
 }
 
 .main-area {
-  padding-bottom: 5vh;
-  width: 95%;
-  max-width: 50em;
+    padding-bottom: 5vh;
+    width: 95%;
+    max-width: 50em;
 }
 
 .disc {
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 a {
-  color: inherit;
+    color: inherit;
 }
 
 .btn {
-  padding-top: 0.5em;
-  font-size: 44pt !important;
+    padding-top: 0.5em;
+    font-size: 44pt !important;
 }
 
 .fab {
-  font-size: calc(15px + 4vmin);
-  color: #322c34;
+    font-size: calc(15px + 4vmin);
+    color: #322c34;
 }
 
 .fab:hover {
-  cursor: pointer;
-  color: #32363e;
+    cursor: pointer;
+    color: #32363e;
 }
 
 .github {
-  position: fixed;
-  bottom: 0.75em;
-  right: 0.75em;
+    position: fixed;
+    bottom: 0.75em;
+    right: 0.75em;
 }
 
 .full-screen {
-  position: fixed;
-  top: 0.75em;
-  right: 0.75em;
+    position: fixed;
+    top: 0.75em;
+    right: 0.75em;
 }
 

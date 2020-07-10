@@ -4,7 +4,7 @@ import {colorTemperatureToRGB} from './lib/colorTempToRGB';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import Fullscreen from 'react-full-screen';
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
-import {faExpand, faPlayCircle, faForward, faRedoAlt} from '@fortawesome/free-solid-svg-icons'
+import {faExpand, faCompress, faPlayCircle, faForward, faRedoAlt} from '@fortawesome/free-solid-svg-icons'
 
 import {useInterval} from './useInterval';
 import {text1850, text1500, text2400, text2700, text3000, text4100, text5000, text6500, text_decrease} from './quotes';
@@ -129,7 +129,7 @@ function App() {
                     <div>
                         <div className="k-meter">{temp}K</div>
                         <div style={{fontSize: 'large', opacity: temp < 1000 ? 1 : 0}}>
-                            {temp === 500 ? 'You found the secret red flashlight!' : '*Color might not be accurate under 1000K' }
+                            {temp === 500 ? 'You found the secret red flashlight!' : '*Color might not be accurate under 1000K'}
                         </div>
                     </div>
                     <div className="main-area">
@@ -155,7 +155,7 @@ function App() {
                         </Transition>
                         <FontAwesomeIcon className="fab btn"
                                          disabled={btn_disable}
-                                         style={{opacity : btn_disable ? 0 : 1}}
+                                         style={{opacity: btn_disable ? 0 : 1}}
                                          icon={slider ? faRedoAlt : (change ? faForward : faPlayCircle)}
                                          onClick={buttonClicked}/>
                     </div>
@@ -163,10 +163,12 @@ function App() {
                 <a href="https://github.com/DEDZTBH/a-tour-of-color-temperature">
                     <FontAwesomeIcon className="fab github" icon={faGithub}/>
                 </a>
+                <FontAwesomeIcon className="fab full-screen"
+                                 icon={isFull ? faCompress : faExpand}
+                                 onClick={() => {
+                                     setIsFull(!isFull);
+                                 }}/>
             </Fullscreen>
-            <FontAwesomeIcon className="fab full-screen" icon={faExpand} onClick={() => {
-                setIsFull(true);
-            }}/>
         </div>
     );
 }
