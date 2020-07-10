@@ -76,7 +76,7 @@ button:hover {
 
 .main-area {
   padding-bottom: 5vh;
-  width: 100%;
+  width: 95%;
 }
 
 .disc {
@@ -90,8 +90,12 @@ a {
   color: inherit;
 }
 
+.btn {
+  padding-top: 0.5em;
+  font-size: 44pt !important;
+}
+
 .fab {
-  position: fixed;
   font-size: calc(15px + 4vmin);
   color: #322c34;
 }
@@ -102,11 +106,13 @@ a {
 }
 
 .github {
+  position: fixed;
   bottom: 0.75em;
   right: 0.75em;
 }
 
 .full-screen {
+  position: fixed;
   top: 0.75em;
   right: 0.75em;
 }

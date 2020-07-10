@@ -6,9 +6,9 @@
 
 export const colorTemperatureToRGB = (kelvin) => {
 
-    var temp = kelvin / 100;
+    const temp = kelvin / 100;
 
-    var red, green, blue;
+    let red, green, blue;
 
     if (temp <= 66) {
 
