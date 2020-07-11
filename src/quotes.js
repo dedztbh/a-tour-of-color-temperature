@@ -13,11 +13,11 @@ export const text2700 =
     `High Pressure Sodium streetlights.
     We used them mainly before LED streetlights.`;
 export const text3000 =
-    `Maximum color temperature for streetlights
-    according to AMA's recommendation. Wait, but why?
+    `Recommended maximum color temperature for streetlights by American Medical Association (AMA)
+    and International Dark Sky Association (IDA). Wait, but why?
     When we go to higher color temperatures, there is more blue light.
-    And excessive blue light has many harmful effects at night.
-    Especially to our health and to the Ecosystem. 
+    And blue light has many harmful effects at night.
+    Especially to our health and to the ecosystem. 
     You will see why soon.`;
 export const text4100 =
     `Moonlight.
@@ -26,23 +26,23 @@ export const text4100 =
     And then, artificial lights intrude into nature.`;
 export const text5000 =
     `Sunlight. 
-    You should not see sunlight at night.
-    Neither should the Ecosystem.
+    You should not see sunlight at night. Neither should the ecosystem.
     Yet, this is not where we stopped.`;
 export const text6500 =
-    `LED streetlights.
-    I know you feel very uncomfortable right now. Lets continue!`;
+    `LED streetlights we have nowadays.
+    I know you feel very uncomfortable right now. Lets go back!`;
 export const text_decrease =
-    `Excessive blue light at night makes us feel uncomfortable and stressed, as you just see.
+    `Blue light at night makes us feel uncomfortable and stressed, as you just see.
      It disrupts our sleep cycle and leads to many long-term health problems.
-     It causes glare that reduces our ability to see at night, imposing safety risks.
+     It causes glare that could blinds us temporarily, imposing safety risks.
      It hinders animals' ability to navigate which can undermine their populations.
      It scatters in the atmosphere and causes Skyglow, blocking light from the stars.
      And the list goes on...
      To effectively reduce light pollution and minimize its damage, we should use non-excessive
      amount of lights that not only are properly shielded but also have warmer colors.
-     Research shows streetlights with color temperature around 2200K
-     or below is ideal for our health and the Ecosystem.`
+     Thanks to evolving technologies, warmer color LEDs have become widely available. 
+     They not only are ideal for our health and the ecosystem but also have higher Color Rendering Index 
+     (aka. enable us to see better at night).`
 export const text1500 =
     `I hope you enjoyed this tour (except for the 6500K part)
     and thank you for being aware of light pollution.

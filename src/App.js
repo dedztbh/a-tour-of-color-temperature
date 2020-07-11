@@ -165,6 +165,15 @@ function App() {
                                         }}
                                                disabled={!slider}/>
                                     </div>
+                                    <div style={{fontSize: 'medium', display: slider ? 'block' : 'none'}}>
+                                        This website is a creative project under CMU Skyglow research course (summer
+                                        2020) brought to you by Peiqi Liu. <br/>
+                                        <a href="https://www.darksky.org/light-pollution/">Learn more about light
+                                            pollution</a> <br/>
+                                        <a href="https://www.theverge.com/21286969/stars-astronomy-pittsburgh-city-light-pollution">Dark
+                                            Skies Over Pittsburgh</a> <br/>
+                                        <a href="https://skyglow-cmu.github.io/">Other things we do at Skyglow</a>
+                                    </div>
                                 </div>
                             )}
                         </Transition>
