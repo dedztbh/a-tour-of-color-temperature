@@ -41,7 +41,8 @@ export const text_decrease =
      And the list goes on...
      To effectively reduce light pollution and minimize its damage, we should use non-excessive
      amount of lights that not only are properly shielded but also have warmer colors.
-     Research shows around 2200K would be desirable for both our health and the Ecosystem.`
+     Research shows streetlights with color temperature around 2200K
+     or below is ideal for our health and the Ecosystem.`
 export const text1500 =
     `I hope you enjoyed this tour (except for the 6500K part)
     and thank you for being aware of light pollution.
