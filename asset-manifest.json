@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/a-tour-of-color-temperature/static/css/main.98d37b9d.chunk.css",
-    "main.js": "/a-tour-of-color-temperature/static/js/main.0de1e548.chunk.js",
+    "main.js": "/a-tour-of-color-temperature/static/js/main.bbf446da.chunk.js",
     "runtime-main.js": "/a-tour-of-color-temperature/static/js/runtime-main.e796e706.js",
     "static/js/2.fe30374c.chunk.js": "/a-tour-of-color-temperature/static/js/2.fe30374c.chunk.js",
     "index.html": "/a-tour-of-color-temperature/index.html",
-    "precache-manifest.6b4bff9281bf7a88ab6762cae40bfb57.js": "/a-tour-of-color-temperature/precache-manifest.6b4bff9281bf7a88ab6762cae40bfb57.js",
+    "precache-manifest.cbe1526dfe7cc215fd4e3f2516997e2b.js": "/a-tour-of-color-temperature/precache-manifest.cbe1526dfe7cc215fd4e3f2516997e2b.js",
     "service-worker.js": "/a-tour-of-color-temperature/service-worker.js",
     "static/js/2.fe30374c.chunk.js.LICENSE.txt": "/a-tour-of-color-temperature/static/js/2.fe30374c.chunk.js.LICENSE.txt"
   },
@@ -13,6 +13,6 @@
     "static/js/runtime-main.e796e706.js",
     "static/js/2.fe30374c.chunk.js",
     "static/css/main.98d37b9d.chunk.css",
-    "static/js/main.0de1e548.chunk.js"
+    "static/js/main.bbf446da.chunk.js"
   ]
 }
