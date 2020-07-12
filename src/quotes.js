@@ -34,7 +34,7 @@ export const text6500 =
 export const text_decrease =
     `Blue light at night makes us feel uncomfortable and stressed, as you just see.
      It disrupts our sleep cycle and leads to many long-term health problems.
-     It causes glare that could blinds us temporarily, imposing safety risks.
+     It causes glare that could blind us temporarily, imposing safety risks.
      It hinders animals' ability to navigate which can undermine their populations.
      It scatters in the atmosphere and causes skyglow, blocking light from the stars.
      And the list goes on...

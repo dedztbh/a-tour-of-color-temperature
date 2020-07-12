@@ -143,8 +143,10 @@ function App() {
                 <div className="App-header" style={{background: `rgb(${rgb.r},${rgb.g},${rgb.b})`}}>
                     <div>
                         <div className="k-meter">{temp}K</div>
-                        <div style={{fontSize: 'large', opacity: temp < 1000 ? 1 : 0}}>
-                            {temp === 500 ? 'You found the secret red flashlight!' : '*Color might not be accurate under 1000K'}
+                        <div style={{fontSize: 'large'}}>
+                            {temp < 1000 ? (temp === 500 ? 'You found the secret red flashlight!' :
+                                '*Color might not be accurate under 1000K') : 'Blue: ' + Math.round((rgb.b * rgb.b) / 625.21) + '%'
+                            }
                         </div>
                     </div>
                     <div className="main-area">
@@ -166,7 +168,8 @@ function App() {
                                                disabled={!slider}/>
                                     </div>
                                     <div style={{fontSize: 'medium', display: slider ? 'block' : 'none'}}>
-                                        This website is a creative project under CMU Skyglow summer research course brought to you by Peiqi Liu. <br/>
+                                        This website is a creative project under CMU Skyglow summer research course
+                                        brought to you by Peiqi Liu. <br/>
                                         <a href="https://www.darksky.org/light-pollution/">Learn more about light
                                             pollution (IDA)</a> <br/>
                                         <a href="https://www.theverge.com/21286969/stars-astronomy-pittsburgh-city-light-pollution">The
