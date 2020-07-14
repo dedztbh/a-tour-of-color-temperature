@@ -7,7 +7,7 @@ import {faGithub} from '@fortawesome/free-brands-svg-icons'
 import {faExpand, faCompress, faPlayCircle, faForward, faRedoAlt} from '@fortawesome/free-solid-svg-icons'
 
 import {useInterval} from './useInterval';
-import {text1850, text1500, text2400, text2700, text3000, text4100, text5000, text6500, text_decrease} from './quotes';
+import {text1900, text1500, text2700, text2200, text3000, text3400, text4100, text5500, text6500, text_decrease} from './quotes';
 import './App.css';
 
 const duration = 500;
@@ -23,11 +23,11 @@ const transitionStyles = {
 };
 
 function App() {
-    const [targetTemp, setTargetTemp] = useState(1850);
-    const [temp, setTemp] = useState(1850);
+    const [targetTemp, setTargetTemp] = useState(1900);
+    const [temp, setTemp] = useState(1900);
     const [page, setPage] = useState(0);
     const [delay, setDelay] = useState(3e8);
-    const [disc, setDisc] = useState(text1850);
+    const [disc, setDisc] = useState(text1900);
     const [discBuffer, setDiscBuffer] = useState('');
     const [change, setChange] = useState(false);
     const [slider, setSlider] = useState(false);
@@ -79,8 +79,8 @@ function App() {
         if (!change) {
             switch (page) {
                 case 0:
-                    setTargetTemp(2400);
-                    setDiscBuffer(text2400);
+                    setTargetTemp(2200);
+                    setDiscBuffer(text2200);
                     setDelay(15);
                     break;
                 case 1:
@@ -94,32 +94,37 @@ function App() {
                     setDelay(15);
                     break;
                 case 3:
+                    setTargetTemp(3400);
+                    setDiscBuffer(text3400);
+                    setDelay(15);
+                    break;
+                case 4:
                     setTargetTemp(4100);
                     setDiscBuffer(text4100);
                     setDelay(10);
                     break;
-                case 4:
-                    setTargetTemp(5000);
-                    setDiscBuffer(text5000);
-                    setDelay(10);
-                    break;
                 case 5:
+                    setTargetTemp(5500);
+                    setDiscBuffer(text5500);
+                    setDelay(5);
+                    break;
+                case 6:
                     setTargetTemp(6500);
                     setDiscBuffer(text6500);
                     setDelay(5);
                     break;
-                case 6:
+                case 7:
                     setTargetTemp(1500);
                     setDiscBuffer(text_decrease);
                     setDelaySetDisc(true);
                     setDelay(15);
                     break;
                 default:
-                    setTargetTemp(1850);
-                    setTemp(1850);
+                    setTargetTemp(1900);
+                    setTemp(1900);
                     setPage(0);
                     setDelay(3e8);
-                    setDisc(text1850);
+                    setDisc(text1900);
                     setChange(false);
                     setSlider(false);
                     setShowMain(true);
