@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4ba8bfccec555cd234415d46e60e1e21",
+    "revision": "bead3a81dfcb373f1652cddcb00a04f5",
     "url": "/a-tour-of-color-temperature/index.html"
   },
   {
-    "revision": "84551efbd92827c81f43",
+    "revision": "e01e18da79f5ead5d81b",
     "url": "/a-tour-of-color-temperature/static/css/main.98d37b9d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/a-tour-of-color-temperature/static/js/2.fe30374c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "84551efbd92827c81f43",
-    "url": "/a-tour-of-color-temperature/static/js/main.d4a732bc.chunk.js"
+    "revision": "e01e18da79f5ead5d81b",
+    "url": "/a-tour-of-color-temperature/static/js/main.78d800e6.chunk.js"
   },
   {
     "revision": "1648f035f72de60afbbf",
