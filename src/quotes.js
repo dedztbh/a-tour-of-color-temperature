@@ -2,7 +2,7 @@ export const text1900 =
     `Welcome to a tour of color temperature!
     Wait, what is color temperature? 
     Color temperature is the temperature at which a blackbody radiates light of this color.
-    I know you are not here for a physics lesson. So lets get started.
+    I know you are not here for a physics lesson. So let's get started.
     Please turn up screen brightness and fullscreen (top right) for the best experience.
     What you see now is the color temperature of candle light.`;
 export const text2200 =
