@@ -7,7 +7,18 @@ import {faGithub} from '@fortawesome/free-brands-svg-icons'
 import {faExpand, faCompress, faPlayCircle, faForward, faRedoAlt} from '@fortawesome/free-solid-svg-icons'
 
 import {useInterval} from './useInterval';
-import {text1900, text1500, text2700, text2200, text3000, text3400, text4100, text5500, text6500, text_decrease} from './quotes';
+import {
+    text1900,
+    text1500,
+    text2700,
+    text2200,
+    text3000,
+    text3400,
+    text4100,
+    text5500,
+    text6500,
+    text_decrease
+} from './quotes';
 import './App.css';
 
 const duration = 500;
@@ -173,6 +184,16 @@ function App() {
                                                disabled={!slider}/>
                                     </div>
                                     <div style={{fontSize: 'medium', display: slider ? 'block' : 'none'}}>
+                                        *Do note that only in dealing with thermal radiation with a Planck (blackbody)
+                                        curve is the color temperature
+                                        and the actual temperature at the peak aligned. Indeed clear blue sky is
+                                        >15000K, but that is not a light source. It's <a
+                                        href="https://en.wikipedia.org/wiki/Rayleigh_scattering">Rayleigh
+                                        scattering</a> of sunlight in
+                                        the atmosphere. &nbsp;
+                                        <a href="https://www.accessfixtures.com/led-wildlife-lighting/">LED wildlife
+                                            friendly lights focus on wavelength instead of Kelvin temperature.</a>
+                                        <br/> <br/>
                                         This website is a creative project under CMU Skyglow summer research course
                                         brought to you by Peiqi Liu. <br/>
                                         <a href="https://www.darksky.org/light-pollution/">Learn more about light
