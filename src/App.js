@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Transition} from 'react-transition-group'
 import {colorTemperatureToRGB} from './lib/colorTempToRGB';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import Fullscreen from 'react-full-screen';
+import {FullScreen, useFullScreenHandle} from 'react-full-screen';
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
 import {faExpand, faCompress, faPlayCircle, faForward, faRedoAlt} from '@fortawesome/free-solid-svg-icons'
 
@@ -42,9 +42,10 @@ function App() {
     const [discBuffer, setDiscBuffer] = useState('');
     const [change, setChange] = useState(false);
     const [slider, setSlider] = useState(false);
-    const [isFull, setIsFull] = useState(false);
+    const fullScreenHandle = useFullScreenHandle();
     const [delaySetDisc, setDelaySetDisc] = useState(false);
     const [showMain, setShowMain] = useState(true);
+
 
     useInterval(() => {
         if (!slider) {
@@ -155,7 +156,7 @@ function App() {
 
     return (
         <div className="App">
-            <Fullscreen enabled={isFull} onChange={f => setIsFull(f)}>
+            <FullScreen handle={fullScreenHandle}>
                 <div className="App-header" style={{background: `rgb(${rgb.r},${rgb.g},${rgb.b})`}}>
                     <div>
                         <div className="k-meter">{temp}K</div>
@@ -216,11 +217,11 @@ function App() {
                     <FontAwesomeIcon className="fab github" icon={faGithub}/>
                 </a>
                 <FontAwesomeIcon className="fab full-screen"
-                                 icon={isFull ? faCompress : faExpand}
+                                 icon={fullScreenHandle.active ? faCompress : faExpand}
                                  onClick={() => {
-                                     setIsFull(!isFull);
+                                     fullScreenHandle.active ? fullScreenHandle.exit() : fullScreenHandle.enter()
                                  }}/>
-            </Fullscreen>
+            </FullScreen>
         </div>
     );
 }
