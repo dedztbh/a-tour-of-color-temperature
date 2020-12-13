@@ -26,6 +26,7 @@ jobs:
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: build
-      - uses: borales/actions-yarn@v2.0.0
+      - uses: peaceiris/actions-gh-pages@v3
         with:
-          cmd: deploy
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
